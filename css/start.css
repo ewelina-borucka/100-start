@@ -1,4 +1,6 @@
-/* ----------------- BASE ----------------- */
+/* --------------------------------------------------*/
+/* --------------------- BASE --------------------- */
+/* ------------------------------------------------*/
 
 * {
   -webkit-box-sizing: border-box;
@@ -10,116 +12,132 @@
 
 body {
   font-family: "Lato";
+  color: #404040;
+  text-align: center;
 }
 
 
-/* ----------------- CONTAINER ----------------- */
+/* --------------------------------------------------*/
+/* ------------------- CONTAINER ------------------ */
+/* ------------------------------------------------*/
 
 .container {
-  width: 96%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 960px;
   margin: 0 auto;
-  /*overflow: auto;*/
 }
 
-/* ---- For devices larger then mobile----*/
-@media (min-width: 400px) {
-  .container {
-    width: 90%;
-  }
+/* --------------------------------------------------*/
+/* --------------------- GRID --------------------- */
+/* ------------------------------------------------*/
+
+
+.row {
+  min-height: 1px;
+  margin-bottom: 50px;
 }
-
-/* ---- For devices larger then tablet----*/
-@media (min-width: 750px) {
-  .container {
-    width: 85%;
-  }
-}
-
-/* ---- For devices larger then desktop ----*/
-@media (min-width: 1000px) {
-  .container {
-    width: 80%;
-  }
-}
-
-
-/* ----------------- GRID ----------------- */
 
 .columns {
   width: 100%;
   float: left;
   overflow: auto;
   padding: 10px;
-  height: 100px;
-  border: 1px solid green;
-}
-
-.col-12 {
-  width: 100%;
-}
-
-.col-11 {
-  width: 91.6666666667%;
-}
-
-.col-10 {
-  width: 83.3333333333%;
-}
-
-.col-9 {
-  width: 75.0%;
-}
-
-.col-8 {
-  width: 66.6666666667%;
-}
-
-.col-7 {
-  width: 58.3333333333%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-5 {
-  width: 41.6666666667%;
-}
-
-.col-4 {
-  width: 33.333333333%;
-  width: -webkit-calc( 100% / 3 );
-  width: -moz-calc( 100% / 3 );
-  width: -ms-calc( 100% / 3 );
-  width: -o-calc( 100% / 3 );
-  width: calc( 100% / 3 );
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-2 {
-  width: 16.666666666%;
-  width: -webkit-calc( 100% / 6 );
-  width: -moz-calc( 100% / 6 );
-  width: -ms-calc( 100% / 6 );
-  width: -o-calc( 100% / 6 );
-  width: calc( 100% / 6 );
-}
-
-.col-1 {
-  width: 8.33333333333%;
+  border: 1px solid gainsboro;
 }
 
 
+/* ---------------------------------------------------- */
+/* -------------- MEDIA QUERIES ---------------------- */
 
-/* ----------------- CLEARING ----------------- */
+
+/* -------------------------------------------------- */
+/* ----------------- MOBILE ------------------------ */
+/* ---- For devices equal or smaller then 499px --- */
+/* ----------------------------------------------- */
+
+@media ( max-width: 499px ) {
+  .col-s-12,
+  .col-s-11,
+  .col-s-10,
+  .col-s-9,
+  .col-s-8,
+  .col-s-7,
+  .col-s-6,
+  .col-s-5,
+  .col-s-4,
+  .col-s-3,
+  .col-s-2,
+  .col-s-1 {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------*/
+/* ----------------- TABLET ------------------------*/
+/* --------- For devices larger then 500px---------*/
+/* -----------------------------------------------*/
+
+
+@media (min-width: 500px) {
+  .col-m-12 { width: 100%; }
+  .col-m-11 { width: 91.6666666667%; }
+  .col-m-10 { width: 83.3333333333%; }
+  .col-m-9 { width: 75.0%; }
+  .col-m-8 { width: 66.6666666667%; }
+  .col-m-7 { width: 58.3333333333%; }
+  .col-m-6 { width: 50%; }
+  .col-m-5 { width: 41.6666666667%; }
+  .col-m-4 { width: 33.333333333%; }
+  .col-m-3 { width: 25%; }
+  .col-m-2 { width: 16.666666666%; }
+  .col-m-1 { width: 8.33333333333%; }
+}
+
+/* --------------------------------------------------*/
+/* ----------------- DESKTOP -----------------------*/
+/* -------- For devices larger then 768px ---------*/
+/* -----------------------------------------------*/
+
+
+@media (min-width: 768px) {
+  .col-12 { width: 100%; }
+  .col-11 { width: 91.6666666667%; }
+  .col-10 { width: 83.3333333333%; }
+  .col-9 { width: 75.0%; }
+  .col-8 { width: 66.6666666667%; }
+  .col-7 { width: 58.3333333333%; }
+  .col-6 { width: 50%; }
+  .col-5 { width: 41.6666666667%; }
+  .col-4 {
+    width: 33.333333333%;
+    width: -webkit-calc( 100% / 3 );
+    width: -moz-calc( 100% / 3 );
+    width: -ms-calc( 100% / 3 );
+    width: -o-calc( 100% / 3 );
+    width: calc( 100% / 3 );
+  }
+  .col-3 { width: 25%; }
+  .col-2 { width: 16.666666666%; }
+  .col-1 { width: 8.33333333333%; }
+}
+
+/* --------------------------------------------------*/
+/* ------------------ CLEARING -------------------- */
+/* ------------------------------------------------*/
 
 .container:after,
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+/* --------------------------------------------------*/
+/* --------------------- IMAGES ------------------- */
+/* ------------------------------------------------*/
+
+
+img {
+  max-width: 100%; /* image never scales up more than its original size */
+  height: auto;
 }
